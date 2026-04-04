@@ -1,0 +1,931 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Venba Bakes — A home-based artisan bakery in Phase-7, Jones Cassia, Chennai. Custom cakes, fresh croissants, pastries, breads and more. Order via WhatsApp." />
+  <meta name="keywords" content="Venba Bakes, bakery Chennai, custom cakes, croissants, pastries, home bakery, birthday cake Chennai" />
+  <meta property="og:title" content="Venba Bakes — We're here to bake you happy!" />
+  <meta property="og:description" content="Artisan home-baked goods in Chennai. Custom cakes for every occasion, fresh pastries, breads & more." />
+  <meta property="og:type" content="website" />
+  <title>Venba Bakes — A Little Bliss in Every Bite</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/png" href="Logo.png" />
+</head>
+<body>
+
+<!-- ══════════════════════════════════════════════════════════
+     STICKY HEADER
+     ══════════════════════════════════════════════════════════ -->
+<header id="site-header">
+  <a class="header-logo" href="#hero" aria-label="Venba Bakes Home">
+    <img src="Logo.png" alt="Venba Bakes Logo" />
+    <div>
+      <div class="header-logo-name">Venba Bakes</div>
+      <div class="header-logo-tagline">A Little Bliss in Every Bite</div>
+    </div>
+  </a>
+
+  <nav class="header-nav" aria-label="Main navigation">
+    <a href="#menu-preview">Menu</a>
+    <a href="#special-orders">Special Orders</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#reviews">Reviews</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <a class="header-cta" href="https://wa.me/918072389875?text=Hi%20Venba%20Bakes!%20I%27d%20like%20to%20place%20an%20order." target="_blank" rel="noopener noreferrer">
+    Order Now
+  </a>
+
+  <button class="hamburger" id="hamburger" aria-label="Open mobile menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</header>
+
+<!-- Mobile Nav -->
+<nav class="mobile-nav" id="mobile-nav" aria-label="Mobile navigation">
+  <a href="#menu-preview" class="mobile-link">Menu</a>
+  <a href="#special-orders" class="mobile-link">Special Orders</a>
+  <a href="#gallery" class="mobile-link">Gallery</a>
+  <a href="#reviews" class="mobile-link">Reviews</a>
+  <a href="#contact" class="mobile-link">Contact</a>
+</nav>
+
+<!-- ══════════════════════════════════════════════════════════
+     HERO SECTION
+     ══════════════════════════════════════════════════════════ -->
+<section id="hero" aria-label="Hero section">
+  <!-- Decorative dot grid -->
+  <div class="hero-dots" aria-hidden="true">
+    <span></span><span></span><span></span><span></span>
+    <span></span><span></span><span></span><span></span>
+    <span></span><span></span><span></span><span></span>
+  </div>
+
+  <div class="hero-inner">
+    <!-- Image Column -->
+    <div class="hero-image-wrap">
+      <!-- Top-left sunburst badge -->
+      <div class="badge-sunburst badge-top-left" aria-hidden="true">
+        <span>Home<br/>Baked</span>
+      </div>
+
+      <!-- Arched hero image frame -->
+      <div class="hero-arch-frame">
+        <img
+          src="https://images.unsplash.com/photo-1506459225024-1428097a7e18?w=700&q=85&auto=format&fit=crop"
+          alt="Freshly baked croissant being pulled apart"
+          loading="eager"
+        />
+      </div>
+
+      <!-- Bottom-right smiley badge -->
+      <div class="badge-sunburst badge-bottom-right" aria-hidden="true">
+        <span>😊</span>
+      </div>
+    </div>
+
+    <!-- Text Column -->
+    <div class="hero-text reveal">
+      <div class="hero-tagline">Chennai's Favourite Home Bakery</div>
+      <h1 class="hero-title">We're here to bake you happy!</h1>
+      <p class="hero-sub">The comfort of freshly baked.</p>
+
+      <div style="display:flex; gap:1rem; flex-wrap:wrap; align-items:center;">
+        <button class="btn-primary" id="hero-cta-btn" onclick="openMenuOverlay()">
+          GET SOME GOODIES!
+        </button>
+        <a class="btn-outline" href="#contact">Contact Us</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════════
+     ON THE MENU PREVIEW
+     ══════════════════════════════════════════════════════════ -->
+<section id="menu-preview" aria-labelledby="menu-preview-title">
+  <div class="container">
+    <div class="section-header reveal">
+      <p class="section-label">Fresh & Made with Love</p>
+      <h2 class="section-title" id="menu-preview-title">On the Menu</h2>
+    </div>
+
+    <div class="menu-preview-grid">
+
+      <!-- Breads -->
+      <div class="menu-cat-card reveal reveal-delay-1" onclick="openMenuOverlay('breads')" tabindex="0" role="button" aria-label="View Breads menu">
+        <div class="menu-cat-img-wrap">
+          <img
+            class="menu-cat-img"
+            src="https://images.unsplash.com/photo-1509440159596-0249088772ff?w=500&q=80&auto=format&fit=crop"
+            alt="Artisan sourdough bread"
+            loading="lazy"
+          />
+          <div class="cat-badge" aria-hidden="true">🍞</div>
+        </div>
+        <div class="menu-cat-name">Breads</div>
+        <div class="menu-cat-desc">Sourdough, focaccia & hearty loaves baked fresh daily</div>
+      </div>
+
+      <!-- Pastries -->
+      <div class="menu-cat-card reveal reveal-delay-2" onclick="openMenuOverlay('pastries')" tabindex="0" role="button" aria-label="View Pastries menu">
+        <div class="menu-cat-img-wrap">
+          <img
+            class="menu-cat-img"
+            src="https://images.unsplash.com/photo-1464305795204-6f5bbfc7fb81?w=500&q=80&auto=format&fit=crop"
+            alt="Golden flaky croissants"
+            loading="lazy"
+          />
+          <div class="cat-badge" aria-hidden="true">🥐</div>
+        </div>
+        <div class="menu-cat-name">Pastries</div>
+        <div class="menu-cat-desc">Buttery croissants, éclairs & hand-crafted delights</div>
+      </div>
+
+      <!-- Cakes -->
+      <div class="menu-cat-card reveal reveal-delay-3" onclick="openMenuOverlay('cakes')" tabindex="0" role="button" aria-label="View Cakes menu">
+        <div class="menu-cat-img-wrap">
+          <img
+            class="menu-cat-img"
+            src="https://images.unsplash.com/photo-1535141192574-5d4897c12636?w=500&q=80&auto=format&fit=crop"
+            alt="Beautifully decorated celebration cake"
+            loading="lazy"
+          />
+          <div class="cat-badge" aria-hidden="true">🎂</div>
+        </div>
+        <div class="menu-cat-name">Cakes</div>
+        <div class="menu-cat-desc">Custom creations for every occasion — birthdays to weddings</div>
+      </div>
+
+      <!-- Savoury -->
+      <div class="menu-cat-card reveal reveal-delay-4" onclick="openMenuOverlay('savoury')" tabindex="0" role="button" aria-label="View Savoury menu">
+        <div class="menu-cat-img-wrap">
+          <img
+            class="menu-cat-img"
+            src="https://images.unsplash.com/photo-1476224203421-9ac39bcb3327?w=500&q=80&auto=format&fit=crop"
+            alt="Savoury pastry puffs"
+            loading="lazy"
+          />
+          <div class="cat-badge" aria-hidden="true">🥧</div>
+        </div>
+        <div class="menu-cat-name">Savoury</div>
+        <div class="menu-cat-desc">Cheese puffs, quiches & savoury bites for any gathering</div>
+      </div>
+
+    </div>
+
+    <div class="menu-preview-cta reveal">
+      <button class="btn-outline" id="view-full-menu-btn" onclick="openMenuOverlay()">
+        VIEW FULL MENU
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════════
+     GALLERY
+     ══════════════════════════════════════════════════════════ -->
+<section id="gallery" aria-labelledby="gallery-title">
+  <div class="container">
+    <div class="section-header reveal">
+      <p class="section-label">From Our Kitchen</p>
+      <h2 class="section-title" id="gallery-title">Our Gallery</h2>
+    </div>
+
+    <div class="gallery-grid" role="list">
+      <div class="gallery-item reveal reveal-delay-1" role="listitem">
+        <img src="cake1.png" alt="Floral decorated white cake with pink and teal roses and cupcakes" loading="lazy" />
+        <div class="gallery-item-overlay"></div>
+      </div>
+      <div class="gallery-item reveal reveal-delay-2" role="listitem">
+        <img src="cake2.png" alt="Custom celebration cake" loading="lazy" />
+        <div class="gallery-item-overlay"></div>
+      </div>
+      <div class="gallery-item reveal reveal-delay-3" role="listitem">
+        <img src="cake3.png" alt="Elegantly piped buttercream cake" loading="lazy" />
+        <div class="gallery-item-overlay"></div>
+      </div>
+      <div class="gallery-item reveal reveal-delay-1" role="listitem">
+        <img src="cake4.png" alt="Pastel themed birthday cake" loading="lazy" />
+        <div class="gallery-item-overlay"></div>
+      </div>
+      <div class="gallery-item reveal reveal-delay-2" role="listitem">
+        <img src="cake5.png" alt="Rose garden decorated cake" loading="lazy" />
+        <div class="gallery-item-overlay"></div>
+      </div>
+      <div class="gallery-item reveal reveal-delay-3" role="listitem">
+        <img src="cake6.png" alt="Multi-tiered festive cake" loading="lazy" />
+        <div class="gallery-item-overlay"></div>
+      </div>
+      <div class="gallery-item reveal reveal-delay-1" role="listitem">
+        <img src="cake7.png" alt="Artistic custom design cake" loading="lazy" />
+        <div class="gallery-item-overlay"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════════
+     SPECIAL ORDERS BANNER
+     ══════════════════════════════════════════════════════════ -->
+<section id="special-orders" aria-labelledby="special-title">
+  <!-- Decorative circles -->
+  <div class="deco-circle deco-c1" aria-hidden="true"></div>
+  <div class="deco-circle deco-c2" aria-hidden="true"></div>
+  <div class="deco-circle deco-c3" aria-hidden="true"></div>
+
+  <div class="container special-inner">
+    <p class="special-eyebrow reveal">Made Just for You</p>
+    <h2 class="section-title special-title reveal" id="special-title">
+      Special orders for <em>Weddings,</em><br/>
+      <em>Birthdays</em> &amp; Events —<br/>
+      tailored to your taste!
+    </h2>
+    <p class="special-sub reveal">
+      From intimate gatherings to grand celebrations, every creation is crafted with care, love, and the finest ingredients.
+    </p>
+    <div class="reveal">
+      <a
+        class="btn-gold"
+        href="https://wa.me/918072389875?text=Hi!%20I%27d%20like%20to%20enquire%20about%20a%20special%20custom%20order."
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <span>💬</span> Request a Custom Order
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════════
+     CUSTOMER LOVE (REVIEWS)
+     ══════════════════════════════════════════════════════════ -->
+<section id="reviews" aria-labelledby="reviews-title">
+  <div class="container">
+    <div class="reviews-header reveal">
+      <p class="section-label">What Our Customers Say</p>
+      <h2 class="section-title" id="reviews-title">Customer Love ❤️</h2>
+      <div class="reviews-stars-display" aria-label="5 star rating">
+        <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+        <span>5.0 on Google Reviews</span>
+      </div>
+    </div>
+
+    <div class="reviews-carousel-wrap" role="region" aria-label="Customer reviews carousel">
+      <div class="reviews-track" id="reviews-track">
+        <div class="review-card reveal reveal-delay-1">
+          <img src="review1.png" alt="5-star Google review from Geethalakshmi about birthday cake" loading="lazy" />
+        </div>
+        <div class="review-card reveal reveal-delay-2">
+          <img src="review2.png" alt="5-star Google review from satisfied customer" loading="lazy" />
+        </div>
+        <div class="review-card reveal reveal-delay-3">
+          <img src="review3.png" alt="5-star Google review praising the baked goods" loading="lazy" />
+        </div>
+        <div class="review-card reveal reveal-delay-4">
+          <img src="review4.png" alt="5-star Google review from a happy customer" loading="lazy" />
+        </div>
+        <div class="review-card reveal reveal-delay-5">
+          <img src="review5.png" alt="5-star Google review about custom cake" loading="lazy" />
+        </div>
+        <div class="review-card reveal reveal-delay-6">
+          <img src="review6.png" alt="5-star Google review from a repeat customer" loading="lazy" />
+        </div>
+        <div class="review-card reveal reveal-delay-1">
+          <img src="review7.png" alt="5-star Google review recommending Venba Bakes" loading="lazy" />
+        </div>
+      </div>
+    </div>
+
+    <div class="carousel-controls">
+      <button class="carousel-btn" id="reviews-prev" aria-label="Previous reviews">&#8592;</button>
+      <div class="carousel-dots" id="reviews-dots" role="tablist" aria-label="Review carousel navigation"></div>
+      <button class="carousel-btn" id="reviews-next" aria-label="Next reviews">&#8594;</button>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════════
+     CONTACT
+     ══════════════════════════════════════════════════════════ -->
+<section id="contact" aria-labelledby="contact-title">
+  <div class="container">
+    <div class="contact-grid">
+      <!-- Info column -->
+      <div class="contact-info-block reveal">
+        <p class="section-label" style="margin-bottom:0.4rem;">Get in Touch</p>
+        <h2 class="section-title" id="contact-title" style="margin-bottom:1rem;">Let's make something<br/>sweet together.</h2>
+        <p class="contact-desc">
+          We'd love to hear from you! Place an order, enquire about a custom creation, or simply say hello. The easiest way to reach us is via WhatsApp or a quick call.
+        </p>
+
+        <div class="contact-details">
+          <div class="contact-row">
+            <div class="contact-icon" aria-hidden="true">📞</div>
+            <div class="contact-row-content">
+              <div class="contact-row-label">Phone / WhatsApp</div>
+              <div class="contact-row-value">
+                <a href="tel:8072389875">+91 80723 89875</a>
+              </div>
+            </div>
+          </div>
+          <div class="contact-row">
+            <div class="contact-icon" aria-hidden="true">📍</div>
+            <div class="contact-row-content">
+              <div class="contact-row-label">Address</div>
+              <div class="contact-row-value">
+                Phase-7, Villa F-02, Jones Cassia,<br/>
+                Chennai, Tamil Nadu, India
+              </div>
+            </div>
+          </div>
+          <div class="contact-row">
+            <div class="contact-icon" aria-hidden="true">🕐</div>
+            <div class="contact-row-content">
+              <div class="contact-row-label">Hours</div>
+              <div class="contact-row-value">
+                Mon–Sat: 8 AM – 8 PM<br/>
+                Sun: 9 AM – 6 PM
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <a
+          class="contact-whatsapp"
+          href="https://wa.me/918072389875?text=Hi%20Venba%20Bakes!%20I%27d%20like%20to%20place%20an%20order."
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Chat on WhatsApp"
+        >
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+          Chat on WhatsApp
+        </a>
+
+        <div class="map-wrap">
+          <div class="map-placeholder">
+            <div class="map-icon">🗺️</div>
+            <p>Phase-7, Villa F-02, Jones Cassia, Chennai</p>
+            <a href="https://maps.google.com/?q=Phase-7+Jones+Cassia+Chennai" target="_blank" rel="noopener noreferrer">Open in Google Maps →</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Form column -->
+      <div class="contact-form-block reveal reveal-delay-2">
+        <form class="contact-form" id="contact-form" novalidate>
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label" for="form-name">Your Name</label>
+              <input class="form-input" id="form-name" name="name" type="text" placeholder="e.g. Priya S." required />
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="form-phone">Phone / WhatsApp</label>
+              <input class="form-input" id="form-phone" name="phone" type="tel" placeholder="+91 98765 43210" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="form-order-type">What are you ordering?</label>
+            <select class="form-select" id="form-order-type" name="orderType">
+              <option value="">— Select a category —</option>
+              <option>Custom Birthday Cake</option>
+              <option>Wedding / Event Cake</option>
+              <option>Pastries & Breads</option>
+              <option>Savoury Items</option>
+              <option>Slices & Cookies</option>
+              <option>Other / Just asking 😊</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="form-message">Your Message</label>
+            <textarea class="form-textarea" id="form-message" name="message" placeholder="Tell us about your order, occasion, flavour preferences, dietary needs…"></textarea>
+          </div>
+          <button type="submit" class="form-submit" id="form-submit-btn">
+            Send via WhatsApp →
+          </button>
+          <p style="font-size:0.72rem; color:#999; margin-top:0.5rem;">
+            Submitting will open WhatsApp with your message pre-filled.
+          </p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════════
+     FOOTER
+     ══════════════════════════════════════════════════════════ -->
+<footer>
+  <div class="container">
+    <div class="footer-logo-wrap">
+      <img src="Logo.png" alt="Venba Bakes Logo" />
+      <div class="footer-brand">Venba Bakes</div>
+    </div>
+    <p class="footer-tagline">"A Little Bliss in Every Bite"</p>
+    <div class="footer-links">
+      <a href="#menu-preview">Menu</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#special-orders">Special Orders</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#contact">Contact</a>
+      <a href="tel:8072389875">+91 80723 89875</a>
+    </div>
+    <div class="footer-copy">
+      &copy; 2025 Venba Bakes, Chennai, Tamil Nadu, India &mdash; Crafted with love 🍰
+    </div>
+  </div>
+</footer>
+
+<!-- Scroll to top -->
+<button id="scroll-top" aria-label="Scroll to top" title="Back to top">&#8593;</button>
+
+<!-- ══════════════════════════════════════════════════════════
+     FULL MENU OVERLAY
+     ══════════════════════════════════════════════════════════ -->
+<div id="menu-overlay" role="dialog" aria-modal="true" aria-label="Full Menu">
+
+  <!-- Overlay Header -->
+  <div class="menu-ov-header">
+    <div>
+      <h2 class="menu-ov-title">Venba<br/>Bakes</h2>
+      <p class="menu-ov-desc">
+        Delicious treats baked only with the finest ingredients.<br/>
+        We love catering for your events — order via WhatsApp to learn more.
+      </p>
+    </div>
+    <button class="menu-close-btn" id="menu-close-btn" onclick="closeMenuOverlay()" aria-label="Close full menu">
+      ✕ Close Menu
+    </button>
+  </div>
+
+  <!-- Action buttons -->
+  <div class="menu-action-row">
+    <a class="menu-action-btn" href="tel:8072389875">
+      <span class="btn-icon">📞</span> Call
+    </a>
+    <a class="menu-action-btn" href="https://maps.google.com/?q=Phase-7+Jones+Cassia+Chennai" target="_blank" rel="noopener noreferrer">
+      <span class="btn-icon">📍</span> Directions
+    </a>
+    <a class="menu-action-btn" href="https://wa.me/918072389875?text=Hi!%20I%27d%20like%20to%20place%20an%20order." target="_blank" rel="noopener noreferrer">
+      <span class="btn-icon">🛵</span> Order via WhatsApp
+    </a>
+    <a class="menu-action-btn" href="https://wa.me/918072389875?text=Hi!%20I%27d%20like%20to%20book%20a%20custom%20order." target="_blank" rel="noopener noreferrer">
+      <span class="btn-icon">📅</span> Book
+    </a>
+    <a class="menu-action-btn" href="#contact" onclick="closeMenuOverlay()">
+      <span class="btn-icon">ℹ️</span> About
+    </a>
+  </div>
+
+  <!-- Category tabs -->
+  <div class="menu-cat-bar" role="tablist" id="menu-cat-bar">
+    <button class="menu-cat-tab active" data-section="pastries" role="tab" aria-selected="true">Pastries</button>
+    <button class="menu-cat-tab" data-section="slices" role="tab" aria-selected="false">Slices</button>
+    <button class="menu-cat-tab" data-section="cakes" role="tab" aria-selected="false">Cakes</button>
+    <button class="menu-cat-tab" data-section="breads" role="tab" aria-selected="false">Breads</button>
+    <button class="menu-cat-tab" data-section="savoury" role="tab" aria-selected="false">Savoury</button>
+    <button class="menu-cat-tab" data-section="cookies" role="tab" aria-selected="false">Cookies</button>
+    <button class="menu-cat-tab" data-section="pies" role="tab" aria-selected="false">Pies</button>
+    <button class="menu-cat-tab" data-section="pizzas" role="tab" aria-selected="false">Pizzas</button>
+  </div>
+
+  <!-- Menu Content -->
+  <div class="menu-ov-content">
+
+    <!-- PASTRIES -->
+    <div class="menu-section active" id="section-pastries">
+      <h3 class="menu-section-title">Pastries</h3>
+      <div class="menu-items-grid">
+
+        <div class="menu-item-card">
+          <img class="menu-item-img" src="https://images.unsplash.com/photo-1568471173242-461f0a730452?w=300&q=80&auto=format&fit=crop" alt="Plain Croissant" loading="lazy" />
+          <div class="menu-item-info">
+            <div>
+              <div class="menu-item-top">
+                <div class="menu-item-name">Plain Croissant</div>
+                <div class="menu-item-price">FR. <strong>₹2</strong></div>
+              </div>
+              <div class="menu-item-sub">Signature Pastry</div>
+              <div class="menu-item-desc">Classically laminated butter croissant with a perfectly golden, flaky crust and a tender, airy interior. A timeless favourite.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-item-card">
+          <img class="menu-item-img" src="https://images.unsplash.com/photo-1620921592704-79e09e6c6e52?w=300&q=80&auto=format&fit=crop" alt="Almond Croissant" loading="lazy" />
+          <div class="menu-item-info">
+            <div>
+              <div class="menu-item-top">
+                <div class="menu-item-name">Almond Croissant</div>
+                <div class="menu-item-price">FR. <strong>₹4</strong></div>
+              </div>
+              <div class="menu-item-sub">Signature Pastry</div>
+              <div class="menu-item-desc">Twice-baked croissant filled with rich, fragrant frangipane cream and topped with toasted flaked almonds. Nutty perfection.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-item-card">
+          <img class="menu-item-img" src="https://images.unsplash.com/photo-1611532736597-de2d4265fba3?w=300&q=80&auto=format&fit=crop" alt="Cinnamon Roll" loading="lazy" />
+          <div class="menu-item-info">
+            <div>
+              <div class="menu-item-top">
+                <div class="menu-item-name">Cinnamon Roll</div>
+                <div class="menu-item-price">FR. <strong>₹5</strong></div>
+              </div>
+              <div class="menu-item-sub">Freshly Baked Daily</div>
+              <div class="menu-item-desc">Soft, pillowy rolls swirled with warm cinnamon butter and finished with a generous drizzle of sweet cream cheese glaze.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-item-card">
+          <img class="menu-item-img" src="https://images.unsplash.com/photo-1602351447937-745cb720612f?w=300&q=80&auto=format&fit=crop" alt="Coffee Éclair" loading="lazy" />
+          <div class="menu-item-info">
+            <div>
+              <div class="menu-item-top">
+                <div class="menu-item-name">Coffee Éclair</div>
+                <div class="menu-item-price">FR. <strong>₹6</strong></div>
+              </div>
+              <div class="menu-item-sub">Patisserie Special</div>
+              <div class="menu-item-desc">Crisp choux pastry filled with espresso-infused crème pâtissière and topped with a glossy dark chocolate ganache glaze.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-item-card">
+          <img class="menu-item-img" src="https://images.unsplash.com/photo-1600326145359-3a44909d1a39?w=300&q=80&auto=format&fit=crop" alt="Pain au Chocolat" loading="lazy" />
+          <div class="menu-item-info">
+            <div>
+              <div class="menu-item-top">
+                <div class="menu-item-name">Pain au Chocolat</div>
+                <div class="menu-item-price">FR. <strong>₹4</strong></div>
+              </div>
+              <div class="menu-item-sub">Weekend Favourite</div>
+              <div class="menu-item-desc">Buttery, laminated pastry wrapped around two batons of premium dark chocolate. A Parisian classic, baked in Chennai.</div>
+            </div>
+            <span class="menu-badge gluten-free">Gluten Free</span>
+          </div>
+        </div>
+
+        <div class="menu-item-card">
+          <img class="menu-item-img" src="https://images.unsplash.com/photo-1488477181946-6428a0291777?w=300&q=80&auto=format&fit=crop" alt="Dusted Profiterole" loading="lazy" />
+          <div class="menu-item-info">
+            <div>
+              <div class="menu-item-top">
+                <div class="menu-item-name">Dusted Profiterole</div>
+                <div class="menu-item-price">FR. <strong>₹4</strong></div>
+              </div>
+              <div class="menu-item-sub">Choux Delight</div>
+              <div class="menu-item-desc">Light-as-air choux puffs filled with vanilla Chantilly cream and dusted with a delicate veil of icing sugar. Pure elegance.</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- SLICES -->
+    <div class="menu-section" id="section-slices">
+      <h3 class="menu-section-title">Slices</h3>
+      <div class="menu-items-grid">
+
+        <div class="menu-item-card">
+          <img class="menu-item-img" src="https://images.unsplash.com/photo-1587314168485-3236d6710814?w=300&q=80&auto=format&fit=crop" alt="Lemon Slice" loading="lazy" />
+          <div class="menu-item-info">
+            <div>
+              <div class="menu-item-top">
+                <div class="menu-item-name">Lemon Slice</div>
+                <div class="menu-item-price">FR. <strong>₹6</strong></div>
+              </div>
+              <div class="menu-item-sub">Zesty & Bright</div>
+              <div class="menu-item-desc">A vibrant tangy lemon curd layer atop a buttery shortbread base, finished with a silky lemon icing. Sunshine in every bite.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-item-card">
+          <img class="menu-item-img" src="https://images.unsplash.com/photo-1606313564200-e75d5e30476c?w=300&q=80&auto=format&fit=crop" alt="Hazelnut Brownie Slice" loading="lazy" />
+          <div class="menu-item-info">
+            <div>
+              <div class="menu-item-top">
+                <div class="menu-item-name">Hazelnut Brownie Slice</div>
+                <div class="menu-item-price">FR. <strong>₹8</strong></div>
+              </div>
+              <div class="menu-item-sub">Indulgent Treat</div>
+              <div class="menu-item-desc">Ultra-fudgy dark chocolate brownie studded with whole toasted hazelnuts and a swirl of Nutella on top. Pure indulgence.</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- CAKES -->
+    <div class="menu-section" id="section-cakes">
+      <h3 class="menu-section-title">Cakes</h3>
+      <div class="menu-items-grid">
+
+        <div class="menu-item-card">
+          <img class="menu-item-img" src="https://images.unsplash.com/photo-1535141192574-5d4897c12636?w=300&q=80&auto=format&fit=crop" alt="Vanilla Celebration Cake" loading="lazy" />
+          <div class="menu-item-info">
+            <div>
+              <div class="menu-item-top">
+                <div class="menu-item-name">Vanilla Celebration Cake</div>
+                <div class="menu-item-price">FR. <strong>₹35</strong></div>
+              </div>
+              <div class="menu-item-sub">Per Kg — Custom Sizes Available</div>
+              <div class="menu-item-desc">Moist vanilla sponge layered with fresh whipped cream, seasonal fruit compote, and frosted to perfection. Perfect for any occasion.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-item-card">
+          <img class="menu-item-img" src="https://images.unsplash.com/photo-1578985545062-6438dfe1edb4?w=300&q=80&auto=format&fit=crop" alt="Rose Garden Cake" loading="lazy" />
+          <div class="menu-item-info">
+            <div>
+              <div class="menu-item-top">
+                <div class="menu-item-name">Rose Garden Cake</div>
+                <div class="menu-item-price">FR. <strong>₹40</strong></div>
+              </div>
+              <div class="menu-item-sub">Signature Design</div>
+              <div class="menu-item-desc">Elegantly piped rosette buttercream in pastel hues, covering a soft vanilla or strawberry sponge. A visual masterpiece.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-item-card">
+          <img class="menu-item-img" src="https://images.unsplash.com/photo-1565958011703-44f9829ba187?w=300&q=80&auto=format&fit=crop" alt="Chocolate Fudge Cake" loading="lazy" />
+          <div class="menu-item-info">
+            <div>
+              <div class="menu-item-top">
+                <div class="menu-item-name">Chocolate Fudge Cake</div>
+                <div class="menu-item-price">FR. <strong>₹38</strong></div>
+              </div>
+              <div class="menu-item-sub">Chocoholic's Dream</div>
+              <div class="menu-item-desc">Rich, decadent triple-chocolate cake with ganache drip, chocolate buttercream swirls, and a dusting of cocoa. Utterly irresistible.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-item-card">
+          <img class="menu-item-img" src="https://images.unsplash.com/photo-1558636508-e0969431e37b?w=300&q=80&auto=format&fit=crop" alt="Custom Birthday Cake" loading="lazy" />
+          <div class="menu-item-info">
+            <div>
+              <div class="menu-item-top">
+                <div class="menu-item-name">Custom Birthday Cake</div>
+                <div class="menu-item-price">Price on Request</div>
+              </div>
+              <div class="menu-item-sub">Fully Personalised</div>
+              <div class="menu-item-desc">Designed around your vision — any theme, colour, flavour, and size. Contact us via WhatsApp to bring your idea to life.</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- BREADS -->
+    <div class="menu-section" id="section-breads">
+      <h3 class="menu-section-title">Breads</h3>
+      <div class="menu-items-grid">
+
+        <div class="menu-item-card">
+          <img class="menu-item-img" src="https://images.unsplash.com/photo-1509440159596-0249088772ff?w=300&q=80&auto=format&fit=crop" alt="Sourdough Loaf" loading="lazy" />
+          <div class="menu-item-info">
+            <div>
+              <div class="menu-item-top">
+                <div class="menu-item-name">Sourdough Loaf</div>
+                <div class="menu-item-price">FR. <strong>₹18</strong></div>
+              </div>
+              <div class="menu-item-sub">Slow Fermented</div>
+              <div class="menu-item-desc">Naturally fermented, open-crumb sourdough with a crackly crust. Made over 24 hours for maximum flavour and digestibility.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-item-card">
+          <img class="menu-item-img" src="https://images.unsplash.com/photo-1586444248902-2f64eddc13df?w=300&q=80&auto=format&fit=crop" alt="Garlic Herb Focaccia" loading="lazy" />
+          <div class="menu-item-info">
+            <div>
+              <div class="menu-item-top">
+                <div class="menu-item-name">Garlic Herb Focaccia</div>
+                <div class="menu-item-price">FR. <strong>₹14</strong></div>
+              </div>
+              <div class="menu-item-sub">Italian Classic</div>
+              <div class="menu-item-desc">Pillowy olive oil-drenched focaccia topped with roasted garlic, fresh rosemary, sea salt, and sun-dried tomatoes.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-item-card">
+          <img class="menu-item-img" src="https://images.unsplash.com/photo-1549931319-a545dcf3bc7c?w=300&q=80&auto=format&fit=crop" alt="Multigrain Sandwich Loaf" loading="lazy" />
+          <div class="menu-item-info">
+            <div>
+              <div class="menu-item-top">
+                <div class="menu-item-name">Multigrain Sandwich Loaf</div>
+                <div class="menu-item-price">FR. <strong>₹16</strong></div>
+              </div>
+              <div class="menu-item-sub">Wholesome & Hearty</div>
+              <div class="menu-item-desc">Packed with seeds, oats, and whole grains. Soft crumb, hearty flavour — perfect for sandwiches or morning toast.</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- SAVOURY -->
+    <div class="menu-section" id="section-savoury">
+      <h3 class="menu-section-title">Savoury</h3>
+      <div class="menu-items-grid">
+
+        <div class="menu-item-card">
+          <img class="menu-item-img" src="https://images.unsplash.com/photo-1620921592704-79e09e6c6e52?w=300&q=80&auto=format&fit=crop&sat=-100" alt="Spinach Cheese Puff" loading="lazy" />
+          <div class="menu-item-info">
+            <div>
+              <div class="menu-item-top">
+                <div class="menu-item-name">Spinach Cheese Puff</div>
+                <div class="menu-item-price">FR. <strong>₹5</strong></div>
+              </div>
+              <div class="menu-item-sub">Vegetarian</div>
+              <div class="menu-item-desc">Golden, flaky puff pastry encasing a creamy blend of wilted spinach, ricotta, and sharp cheddar. Irresistibly warm and comforting.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-item-card">
+          <img class="menu-item-img" src="https://images.unsplash.com/photo-1601050690597-df0568f70950?w=300&q=80&auto=format&fit=crop" alt="Chicken Empanada" loading="lazy" />
+          <div class="menu-item-info">
+            <div>
+              <div class="menu-item-top">
+                <div class="menu-item-name">Chicken Empanada</div>
+                <div class="menu-item-price">FR. <strong>₹7</strong></div>
+              </div>
+              <div class="menu-item-sub">House Special</div>
+              <div class="menu-item-desc">Tender, spiced chicken filling wrapped in a shortcrust pastry shell, baked until golden and crisp. Great for snacking or sharing.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-item-card">
+          <img class="menu-item-img" src="https://images.unsplash.com/photo-1574071318508-1cdbab80d002?w=300&q=80&auto=format&fit=crop" alt="Vegetable Quiche" loading="lazy" />
+          <div class="menu-item-info">
+            <div>
+              <div class="menu-item-top">
+                <div class="menu-item-name">Vegetable Quiche</div>
+                <div class="menu-item-price">FR. <strong>₹9</strong></div>
+              </div>
+              <div class="menu-item-sub">Vegetarian · Per Slice</div>
+              <div class="menu-item-desc">A classic French-style quiche with a buttery pastry shell, silky egg custard, sautéed seasonal vegetables, and gruyère cheese.</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- COOKIES -->
+    <div class="menu-section" id="section-cookies">
+      <h3 class="menu-section-title">Cookies</h3>
+      <div class="menu-items-grid">
+
+        <div class="menu-item-card">
+          <img class="menu-item-img" src="https://images.unsplash.com/photo-1499636136210-6f4ee915583e?w=300&q=80&auto=format&fit=crop" alt="Classic Chocolate Chip Cookie" loading="lazy" />
+          <div class="menu-item-info">
+            <div>
+              <div class="menu-item-top">
+                <div class="menu-item-name">Classic Choco Chip</div>
+                <div class="menu-item-price">FR. <strong>₹3</strong></div>
+              </div>
+              <div class="menu-item-sub">All-Time Favourite</div>
+              <div class="menu-item-desc">Crisp edges, chewy centre, and loaded with pools of melted dark chocolate. Brown-butter infused for extra depth of flavour.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-item-card">
+          <img class="menu-item-img" src="https://images.unsplash.com/photo-1548365328-8b849e6e9ec8?w=300&q=80&auto=format&fit=crop" alt="Salted Caramel Cookie" loading="lazy" />
+          <div class="menu-item-info">
+            <div>
+              <div class="menu-item-top">
+                <div class="menu-item-name">Salted Caramel</div>
+                <div class="menu-item-price">FR. <strong>₹4</strong></div>
+              </div>
+              <div class="menu-item-sub">Sweet & Salty</div>
+              <div class="menu-item-desc">Buttery, caramel-studded cookie with a generous sprinkle of fleur de sel. The perfect balance of sweet and salty in every bite.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-item-card">
+          <img class="menu-item-img" src="https://images.unsplash.com/photo-1558961363-fa8fdf82db35?w=300&q=80&auto=format&fit=crop" alt="Snickerdoodle Cookie" loading="lazy" />
+          <div class="menu-item-info">
+            <div>
+              <div class="menu-item-top">
+                <div class="menu-item-name">Snickerdoodle</div>
+                <div class="menu-item-price">FR. <strong>₹3</strong></div>
+              </div>
+              <div class="menu-item-sub">Cinnamon Sugar Classic</div>
+              <div class="menu-item-desc">Pillowy soft cookies rolled in cinnamon sugar with a slightly tangy cream of tartar finish. Warm, comforting, and utterly nostalgic.</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- PIES -->
+    <div class="menu-section" id="section-pies">
+      <h3 class="menu-section-title">Pies</h3>
+      <div class="menu-items-grid">
+
+        <div class="menu-item-card">
+          <img class="menu-item-img" src="https://images.unsplash.com/photo-1562007908-17c67e878c88?w=300&q=80&auto=format&fit=crop" alt="Buttery Apple Pie" loading="lazy" />
+          <div class="menu-item-info">
+            <div>
+              <div class="menu-item-top">
+                <div class="menu-item-name">Buttery Apple Pie</div>
+                <div class="menu-item-price">FR. <strong>₹22</strong></div>
+              </div>
+              <div class="menu-item-sub">Classic Comfort</div>
+              <div class="menu-item-desc">Double-crust golden pastry filled with cinnamon-spiced Granny Smith apples and a touch of vanilla. A timeless family favourite.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-item-card">
+          <img class="menu-item-img" src="https://images.unsplash.com/photo-1519915028121-7d3463d20b13?w=300&q=80&auto=format&fit=crop" alt="Lemon Meringue Pie" loading="lazy" />
+          <div class="menu-item-info">
+            <div>
+              <div class="menu-item-top">
+                <div class="menu-item-name">Lemon Meringue Pie</div>
+                <div class="menu-item-price">FR. <strong>₹24</strong></div>
+              </div>
+              <div class="menu-item-sub">Showstopper</div>
+              <div class="menu-item-desc">Zingy lemon curd in a crisp pastry case, crowned with billowing toasted meringue peaks. Visually stunning and utterly delicious.</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- PIZZAS -->
+    <div class="menu-section" id="section-pizzas">
+      <h3 class="menu-section-title">Pizzas</h3>
+      <div class="menu-items-grid">
+
+        <div class="menu-item-card">
+          <img class="menu-item-img" src="https://images.unsplash.com/photo-1513104890138-7c749659a591?w=300&q=80&auto=format&fit=crop" alt="Margherita Pizza" loading="lazy" />
+          <div class="menu-item-info">
+            <div>
+              <div class="menu-item-top">
+                <div class="menu-item-name">Margherita</div>
+                <div class="menu-item-price">FR. <strong>₹20</strong></div>
+              </div>
+              <div class="menu-item-sub">Classic · Vegetarian</div>
+              <div class="menu-item-desc">Stone-baked thin crust topped with San Marzano tomato sauce, fresh buffalo mozzarella, and fragrant basil leaves. Simplicity perfected.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-item-card">
+          <img class="menu-item-img" src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=300&q=80&auto=format&fit=crop" alt="BBQ Chicken Pizza" loading="lazy" />
+          <div class="menu-item-info">
+            <div>
+              <div class="menu-item-top">
+                <div class="menu-item-name">BBQ Chicken</div>
+                <div class="menu-item-price">FR. <strong>₹24</strong></div>
+              </div>
+              <div class="menu-item-sub">Crowd Pleaser</div>
+              <div class="menu-item-desc">Smoky BBQ base with tender pulled chicken, caramelised onions, mozzarella, and a drizzle of house ranch. Sticky, smoky perfection.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-item-card">
+          <img class="menu-item-img" src="https://images.unsplash.com/photo-1458642849426-cfb724f15ef7?w=300&q=80&auto=format&fit=crop" alt="Pesto Veggie Pizza" loading="lazy" />
+          <div class="menu-item-info">
+            <div>
+              <div class="menu-item-top">
+                <div class="menu-item-name">Pesto Veggie</div>
+                <div class="menu-item-price">FR. <strong>₹22</strong></div>
+              </div>
+              <div class="menu-item-sub">Vegetarian · Fresh</div>
+              <div class="menu-item-desc">Basil pesto base loaded with roasted courgette, cherry tomatoes, artichoke hearts, olives, and a generous grating of Parmesan.</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div><!-- /menu-ov-content -->
+</div><!-- /menu-overlay -->
+
+<script src="script.js"></script>
+</body>
+</html>
